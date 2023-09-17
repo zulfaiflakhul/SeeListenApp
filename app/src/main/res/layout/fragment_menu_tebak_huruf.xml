@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/see_listen_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.MenuTebakHurufFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_baner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="62dp"
+                android:layout_marginBottom="62dp"
+                android:text="Tebak Huruf"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/hurufAEButton"
+                android:layout_width="86.25dp"
+                android:layout_height="86.25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_alfabet_permainan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBarAE"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:max="5"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circle_shape"
+                app:layout_constraintBottom_toBottomOf="@+id/hurufAEButton"
+                app:layout_constraintEnd_toEndOf="@+id/hurufAEButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufAEButton"
+                app:layout_constraintTop_toTopOf="@+id/hurufAEButton" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_ceklistae"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_ceklist"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarAE"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarAE" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Huruf A-E"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/hurufAEButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufAEButton"
+                app:layout_constraintTop_toBottomOf="@+id/hurufAEButton" />
+
+            <ImageView
+                android:id="@+id/hurufFJButton"
+                android:layout_width="86.25dp"
+                android:layout_height="86.25dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/ic_alfabet_permainan_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <ProgressBar
+                android:id="@+id/progressBarFJ"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/circle_shape"
+                android:max="5"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/hurufFJButton"
+                app:layout_constraintEnd_toEndOf="@+id/hurufFJButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufFJButton"
+                app:layout_constraintTop_toTopOf="@+id/hurufFJButton" />
+
+            <ImageView
+                android:id="@+id/ic_lockfj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarFJ"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarFJ" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_ceklistfj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_ceklist"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarFJ"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarFJ" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Huruf F-J"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/hurufFJButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufFJButton"
+                app:layout_constraintTop_toBottomOf="@+id/hurufFJButton" />
+
+            <ImageView
+                android:id="@+id/hurufKOButton"
+                android:layout_width="86.25dp"
+                android:layout_height="86.25dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_alfabet_permainan_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <ProgressBar
+                android:id="@+id/progressBarKO"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/circle_shape"
+                android:max="5"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/hurufKOButton"
+                app:layout_constraintEnd_toEndOf="@+id/hurufKOButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufKOButton"
+                app:layout_constraintTop_toTopOf="@+id/hurufKOButton" />
+
+            <ImageView
+                android:id="@+id/ic_lockko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarKO"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarKO" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_ceklistko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_ceklist"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarKO"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarKO" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Huruf K-O"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/hurufKOButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufKOButton"
+                app:layout_constraintTop_toBottomOf="@+id/hurufKOButton" />
+
+            <ImageView
+                android:id="@+id/hurufPTButton"
+                android:layout_width="86.25dp"
+                android:layout_height="86.25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_alfabet_permainan_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <ProgressBar
+                android:id="@+id/progressBarPT"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/circle_shape"
+                android:max="5"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/hurufPTButton"
+                app:layout_constraintEnd_toEndOf="@+id/hurufPTButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufPTButton"
+                app:layout_constraintTop_toTopOf="@+id/hurufPTButton" />
+
+            <ImageView
+                android:id="@+id/ic_lockpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarPT"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarPT" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_ceklistpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_ceklist"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarPT"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarPT" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Huruf P-T"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/hurufPTButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufPTButton"
+                app:layout_constraintTop_toBottomOf="@+id/hurufPTButton" />
+
+            <ImageView
+                android:id="@+id/hurufUZButton"
+                android:layout_width="86.25dp"
+                android:layout_height="86.25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_alfabet_permainan_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <ProgressBar
+                android:id="@+id/progressBarUZ"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/circle_shape"
+                android:max="100"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/hurufUZButton"
+                app:layout_constraintEnd_toEndOf="@+id/hurufUZButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufUZButton"
+                app:layout_constraintTop_toTopOf="@+id/hurufUZButton" />
+
+            <ImageView
+                android:id="@+id/ic_lockuz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarUZ"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarUZ" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_ceklistuz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_ceklist"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarUZ"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarUZ" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Huruf U-Z"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/hurufUZButton"
+                app:layout_constraintStart_toStartOf="@+id/hurufUZButton"
+                app:layout_constraintTop_toBottomOf="@+id/hurufUZButton" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="206dp"
+                android:layout_height="344dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="-30dp"
+                android:src="@drawable/img_tebak_huruf"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

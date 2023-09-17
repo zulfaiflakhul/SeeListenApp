@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.GameTebakHurufFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="1dp"
+        android:background="@color/white"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Tebak gambar"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/gameProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:progress="1"
+            android:max="1"
+            android:progressDrawable="@drawable/horizontal_progressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/gameKeempat"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageContainer"
+            android:layout_marginTop="-35dp"
+            app:cardCornerRadius="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Gambar apakah ini?"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/imageTest"
+                    android:src="@drawable/img_bunga"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="183.08dp"
+                    android:layout_height="150dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/camera_container"
+            android:layout_marginTop="-35dp"
+            android:layout_below="@id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/view_finder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:scaleType="fillStart" />
+
+            <RelativeLayout
+                android:id="@+id/bottomNavCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/see_listen_transparent"
+                android:paddingVertical="25dp">
+
+                <ImageButton
+                    android:id="@+id/penerjemahBtnFlashCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/see_listen_transparent"
+                    android:contentDescription="@string/button_flash_camera"
+                    app:srcCompat="@drawable/ic_flash_off" />
+
+                <ImageButton
+                    android:id="@+id/penerjemahBtnFlipCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/see_listen_transparent"
+                    android:contentDescription="@string/buttonflipcamera"
+                    app:srcCompat="@drawable/ic_switch_camera" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/recyclerview_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="90dp"
+                android:background="@drawable/shape_deskripsi"
+                android:clipToPadding="true"
+                android:padding="5dp"
+                android:gravity="center_horizontal"
+                app:layout_anchor="@id/bottomNavCamera"
+                app:layout_anchorGravity="top"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" >
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textSatu"
+                    android:text="B"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textDua"
+                    android:text="U"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textTiga"
+                    android:text="N"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textEmpat"
+                    android:text="G"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textLima"
+                    android:text="A"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/see_listen_transparent"
+                app:layout_anchor="@id/recyclerview_results"
+                app:layout_anchorGravity="bottom" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

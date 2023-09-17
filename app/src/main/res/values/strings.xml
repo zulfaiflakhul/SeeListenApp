@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">See Listen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masuk">Masuk</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="umur">Umur</string>
+    <string name="kota">Kota</string>
+
+    <!-- Mediapipe -->
+
+    <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
+
+    <string name="alt_bottom_sheet_max_results_button_minus">Decreasing maximum recognized results button</string>
+    <string name="alt_bottom_sheet_max_results_button_plus">Increasing maximum recognized results button</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decreasing threshold of recognized hand gesture results button</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">Increasing threshold of recognized hand gesture results button</string>
+    <string name="alt_bottom_sheet_thread_button_minus">Decrease the number of threads used</string>
+    <string name="alt_bottom_sheet_thread_button_plus">Increase the number of threads used</string>
+    <string name="menu_camera">Camera</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="tv_gallery_placeholder">Click + to add an image or a video to begin running the gesture recognizer.</string>
+
+    <string name="label_inference_time">Inference Time</string>
+    <string name="label_fps">Frames per Second</string>
+    <string name="label_hand_detection_confidence_threshold">Detection Threshold</string>
+    <string name="label_hand_tracking_confidence_threshold">Tracking Threshold</string>
+    <string name="label_hand_presence_confidence_threshold">Presence Threshold</string>
+    <string name="label_delegate">Delegate</string>
+    <string name="button_flash_camera">FlashCamera</string>
+    <string name="button_menu">ButtonMenu</string>
+    <string name="button_flip_camera">ButtonFlipCamera</string>
+    <string name="bahasa_isyarat">Bahasa Isyarat</string>
+    <string name="fab">FAB</string>
+    <string name="seelisten_detail">Learning Sign Language EVERYWHERE</string>
+    <string name="buttonmenu">ButtonMenu</string>
+    <string name="buttonflipcamera">ButtonFlipCamera</string>
+    <string name="pilih">Pilih</string>
+    <string name="home">Home</string>
+    <string name="informasi">Informasi</string>
+    <string name="akun">Akun</string>
+    <string name="bantuan">Bantuan</string>
+    <string name="penerjemah">Penerjemah</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+
+    <string name="dialog_signout">Apakah Anda yakin akan keluar?</string>
+    <string name="dialog_hapusakun">Apakah Anda yakin akan menghapus akun?</string>
+
+    <string name="tentang_aplikasi">
+        <![CDATA[
+        Terakhir diubah pada 7 Juni 2023<br/><br/><b>Aplikasi See Listen</b> adalah sebuah platform inovatif yang bertujuan untuk memfasilitasi komunikasi antara pengguna normal dengan individu penyandang tuna rungu dan tuna wicara. Aplikasi ini dapat menerjemahkan bahasa isyarat secara real time, sehingga membantu pengguna memahami dan berkomunikasi dengan lebih baik dalam situasi di mana bahasa isyarat digunakan.<br/><br/>Tujuan utama dari aplikasi See Listen adalah <b>meningkatkan kemampuan komunikasi individu penyandang tuna rungu dan tuna wicara.</b> Dengan menggunakan aplikasi ini, mereka dapat dengan lebih mudah berkomunikasi dengan masyarakat umum yang mungkin tidak familiar dengan bahasa isyarat. Aplikasi ini juga bertujuan untuk memfasilitasi pengguna normal yang tertarik untuk mempelajari bahasa isyarat. Dengan menggunakan fitur real-time detection, pengguna dapat belajar dan berlatih bahasa isyarat dengan lebih interaktif dan efektif.<br/><br/><b>Instalasi dan Konfigurasi</b><br/><br/><b>1. Persyaratan Sistem:</b><br/>Sebelum menginstal aplikasi See Listen, pastikan perangkat Anda memenuhi persyaratan sistem berikut:<br/>a. Smartphone dengan sistem operasi Android minimal Android versi 7.0 (Android Nouget) ke atas atau yang mendukung aplikasi See Listen.<br/>b. Koneksi internet yang stabil untuk mengunduh dan memperbarui aplikasi.<br/>c. Ruang penyimpanan yang cukup untuk menginstal aplikasi dan menyimpan data.<br/><br/><b>2. Konfigurasi Kamera Smartphone:</b><br/>Sebelum menggunakan aplikasi See Listen, pastikan kamera smartphone Anda dikonfigurasi dengan benar. Ikuti langkah-langkah berikut:<br/>a. Buka pengaturan perangkat Anda.<br/>b. Cari opsi "Aplikasi" atau "Izin Aplikasi" dan pilih aplikasi See Listen.<br/>c. Pastikan izin kamera diaktifkan untuk aplikasi See Listen. Jika tidak, aktifkan izin kamera dengan menggeser tombol ke posisi "Aktif".<br/><br/><b>3. Memperoleh Akses Izin Aplikasi:</b><br/>Untuk dapat menggunakan semua fitur aplikasi See Listen dengan baik, Anda perlu memberikan akses izin yang diperlukan. Beberapa izin yang mungkin diminta oleh aplikasi ini antara lain:<br/>- Akses ke kamera: Izinkan aplikasi See Listen menggunakan kamera smartphone Anda untuk mendeteksi dan menerjemahkan bahasa isyarat.<br/>- Akses ke mikrofon: Jika aplikasi menyediakan fitur audio, izinkan akses mikrofon untuk penggunaan tersebut.<br/>- Akses ke penyimpanan: Jika aplikasi memiliki fitur untuk menyimpan data atau mengakses tutorial video, izinkan akses ke penyimpanan perangkat.<br/><br/>Untuk memberikan izin akses, ikuti langkah-langkah berikut:<br/>a. Buka aplikasi See Listen di perangkat Anda.<br/>b. Pada saat pertama kali menggunakan aplikasi, Anda mungkin akan diminta untuk memberikan izin akses yang diperlukan.<br/>c. Ikuti petunjuk yang muncul di layar untuk memberikan izin akses yang diminta.<br/><br/>Setelah instalasi dan konfigurasi selesai, Anda siap untuk menggunakan aplikasi See Listen dan memanfaatkan fitur-fitur unggulannya dalam menerjemahkan bahasa isyarat secara real time serta mengakses tutorial bahasa isyarat yang bermanfaat.
+        ]]>
+    </string>
+
+    <string name="kebijakan_privasi">
+        <![CDATA[
+        Terakhir diubah pada 7 Juni 2023<br/><br/><b>Kebijakan Privasi</b> kami menjelaskan bagaimana data pribadi Anda dikumpulkan, digunakan, dan dilindungi ketika Anda menggunakan aplikasi See Listen. Harap baca kebijakan ini dengan cermat untuk memahami praktik kami terkait privasi.<br/><br/><b>Pengumpulan Data:</b><br/>a. Aplikasi See Listen menggunakan kamera smartphone untuk memindai dan memproses gestur bahasa isyarat pengguna. Data visual yang dikumpulkan hanya digunakan untuk menerjemahkan bahasa isyarat secara real time, dan tidak disimpan oleh aplikasi.<br/>b. Kami tidak mengumpulkan informasi pribadi seperti nama, alamat, atau informasi identifikasi pribadi lainnya.<br/><br/><b>Penggunaan Data:</b><br/>a. Data visual yang dikumpulkan hanya digunakan untuk tujuan terjemahan bahasa isyarat secara real time melalui aplikasi ini.<br/>b. Kami tidak membagikan, menjual, atau menyewakan data pribadi Anda kepada pihak ketiga tanpa izin Anda, kecuali jika diwajibkan oleh hukum.<br/><br/><b>Keamanan Data:</b><br/>a. Kami menjaga langkah-langkah keamanan yang sesuai untuk melindungi data pribadi Anda dari akses yang tidak sah, perubahan, pengungkapan, atau penghancuran yang tidak diinginkan.<br/>b. Meskipun kami berupaya untuk menjaga keamanan data, harap diingat bahwa tidak ada metode pengiriman data secara online atau penyimpanan elektronik yang 100% aman.<br/><br/><b>Hak Anda:</b><br/>a. Anda memiliki hak untuk mengakses, memperbaiki, atau menghapus data pribadi Anda yang kami miliki.<br/>b. Jika Anda memiliki pertanyaan atau kekhawatiran terkait privasi atau penggunaan data, silakan hubungi kami melalui kontak yang tercantum di aplikasi.<br/><br/>Harap dicatat bahwa kebijakan privasi ini dapat berubah seiring waktu. Pastikan untuk mengunjungi halaman kebijakan privasi kami secara berkala untuk mendapatkan pembaruan terbaru.
+        ]]>
+    </string>
+
+    <string name="syarat_ketentuan">
+        <![CDATA[
+        Terakhir diubah pada 7 Juni 2023<br/><br/><b>Ketentuan Layanan</b><br/>Harap diperhatikan bahwa penggunaan aplikasi See Listen tunduk pada syarat dan ketentuan berikut. Dengan mengunduh, mengakses, atau menggunakan aplikasi ini, Anda dianggap telah membaca, memahami, dan menyetujui ketentuan layanan ini.<br/><br/><b>Penggunaan Aplikasi:</b><br/>a. Aplikasi See Listen ditujukan untuk digunakan oleh individu penyandang disabilitas maupun non-disabilitas yang ingin belajar dan berkomunikasi dengan bahasa isyarat.<br/>b. Aplikasi ini diperuntukkan untuk tujuan edukasi dan komunikasi. Pengguna dilarang menggunakan aplikasi ini untuk tujuan yang melanggar hukum atau merugikan orang lain.<br/><br/><b>Hak Kekayaan Intelektual:</b><br/>a. Aplikasi See Listen, termasuk semua konten, video tutorial, dan teknologi yang terkait, merupakan hak cipta dan kekayaan intelektual dari tim pengembang kami.<br/>b. Anda tidak diperkenankan untuk menggandakan, menyalin, memodifikasi, atau mendistribusikan konten dari aplikasi ini tanpa izin tertulis dari tim pengembang.<br/><br/><b>Penggunaan Data:</b><br/>a. Aplikasi ini menggunakan kamera martphone untuk memindai dan memproses gestur bahasa isyarat pengguna. Data visual yang dikumpulkan melalui kamera akan digunakan untuk menerjemahkan bahasa isyarat secara real time.<br/>b. Kami akan menjaga kerahasiaan data dan tidak akan membagikan data Anda kepada pihak ketiga tanpa izin Anda, kecuali jika diwajibkan oleh hukum.<br/><br/><b>Privasi Pengguna:</b><br/>a. Kami menghormati privasi pengguna. Silakan merujuk ke Kebijakan Privasi kami untuk informasi lebih lanjut mengenai pengumpulan, penggunaan, dan perlindungan data pribadi Anda.<br/><br/><b>Keberhasilan Terjemahan:</b><br/>a. Aplikasi See Listen menggunakan teknologi AI Computer Vision untuk menerjemahkan bahasa isyarat. Meskipun kami berupaya untuk memberikan hasil terjemahan yang akurat, tidak ada jaminan kesuksesan penerjemahan 100%.<br/>b. Tim pengembang tidak bertanggung jawab atas ketidakakuratan atau kesalahan dalam penerjemahan bahasa isyarat yang dihasilkan oleh aplikasi ini.<br/><br/><b>Perubahan dan Pembaruan:</b><br/>a. Tim pengembang berhak untuk memperbarui atau mengubah fitur dan fungsi aplikasi See Listen tanpa pemberitahuan sebelumnya.<br/>b. Perubahan signifikan akan diumumkan melalui pembaruan aplikasi.<br/><br/>Harap diperhatikan bahwa ketentuan layanan ini dapat berubah seiring waktu. Pastikan untuk mengunjungi halaman ketentuan layanan kami secara berkala untuk mendapatkan pembaruan terbaru.<br/><br/><b>Kebijakan Penggunaan</b><br/>Kebijakan Penggunaan kami menjelaskan pedoman yang perlu diikuti oleh pengguna saat menggunakan aplikasi See Listen. Dengan mengunduh, mengakses, atau menggunakan aplikasi ini, Anda dianggap telah membaca, memahami, dan menyetujui kebijakan penggunaan ini.<br/><br/><b>Penggunaan yang Dilarang:</b><br/>a. Pengguna dilarang menggunakan aplikasi ini untuk tujuan yang melanggar hukum, mengancam, mengintimidasi, menghina, atau merugikan pihak lain.<br/>b. Anda dilarang mengunggah, mengirimkan, atau membagikan konten yang melanggar hak kekayaan intelektual, mengandung kekerasan, kebencian, atau pornografi.<br/><br/><b>Tanggung Jawab Pengguna:</b><br/>a. Pengguna bertanggung jawab atas semua aktivitas yang terjadi melalui akun pengguna mereka.<br/>b. Anda dilarang menggunakan aplikasi ini untuk mengakses atau merusak data, sistem, atau informasi yang terkait dengan pihak ketiga tanpa izin.<br/><br/><b>Pelanggaran Kebijakan:</b><br/>a. Jika Anda melanggar kebijakan penggunaan ini, tim pengembang berhak untuk mengambil tindakan yang diperlukan, termasuk penangguhan atau penghapusan akun pengguna.<br/><br/>Harap dicatat bahwa kebijakan penggunaan ini dapat berubah seiring waktu. Pastikan untuk mengunjungi halaman kebijakan penggunaan kami secara berkala untuk mendapatkan pembaruan terbaru.
+        ]]>
+    </string>
+    <string name="ganti">Ganti</string>
+
+    <string-array name="delegate_spinner_titles">
+        <item>GPU</item>
+        <item>CPU</item>
+    </string-array>
+
+    <string-array name="bahasa_spinner_titles">
+        <item>Data Dumy</item>
+        <item>Sibi</item>
+        <item>Bisindo</item>
+    </string-array>
+
+    <string-array name="nama_kota">
+        <item>Kab. Aceh Barat</item>
+        <item>Kab. Aceh Barat Daya</item>
+        <item>Kab. Aceh Besar</item>
+    </string-array>
+</resources>

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/see_listen_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp"
+        tools:context=".view.GameFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_baner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:text="Akun"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Temukan informasimu disini"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:outlineSpotShadowColor="@color/see_listen_transparent"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profileUserImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_avatar" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/profileUserNameTv"
+                    style="@style/Heading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:text="Jhonny"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                    app:layout_constraintStart_toEndOf="@+id/cardView"
+                    app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+                <ImageButton
+                    android:id="@+id/editFotoProfilBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/see_listen_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profileUserNameTv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_edit"
+                    app:tint="@color/see_listen_neutral1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Akun"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/akunContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/shape_bg_profile"
+                android:paddingStart="15dp"
+                android:paddingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                <ImageView
+                    android:id="@+id/ic_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:tint="@color/see_listen_neutral2"
+                    android:src="@drawable/ic_akun_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditGenderBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_gender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_gender"
+                    app:layout_constraintTop_toTopOf="@+id/ic_gender">
+
+                    <TextView
+                        android:id="@+id/profileUserGenderTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Masukan Gender"
+                        android:textColor="@color/see_listen_neutral2" />
+
+                    <ImageView
+                        android:id="@+id/ic_right1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underLineGender"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_gender"
+                    app:layout_constraintTop_toBottomOf="@+id/icEditGenderBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_lokasi"
+                    app:tint="@color/see_listen_neutral2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underLineGender" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditKotaBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_lokasi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_lokasi"
+                    app:layout_constraintTop_toTopOf="@+id/ic_lokasi">
+
+                    <TextView
+                        android:id="@+id/profileUserKotaTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Masukan Tempat Tinggal"
+                        android:textColor="@color/see_listen_neutral2" />
+
+                    <ImageView
+                        android:id="@+id/ic_right2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underLineKota"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_lokasi"
+                    app:layout_constraintTop_toBottomOf="@+id/icEditKotaBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_kalender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    app:tint="@color/see_listen_neutral2"
+                    android:src="@drawable/ic_kalender"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underLineKota" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditTtlBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_kalender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_kalender"
+                    app:layout_constraintTop_toTopOf="@+id/ic_kalender">
+
+                    <TextView
+                        android:id="@+id/profileUserTTLTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Masukan Tanggal lahir"
+                        android:textColor="@color/see_listen_neutral2" />
+
+                    <ImageView
+                        android:id="@+id/ic_right3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underLineTtl"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_kalender"
+                    app:layout_constraintTop_toBottomOf="@+id/icEditTtlBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_email"
+                    app:tint="@color/see_listen_neutral2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underLineTtl" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditEmailBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_email"
+                    app:layout_constraintTop_toTopOf="@+id/ic_email">
+
+                    <TextView
+                        android:id="@+id/profileUserEmailTv"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#FF222227"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="jhonnyaye@gmail.com" />
+
+                    <ImageView
+                        android:id="@+id/ic_right4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underLineEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_email"
+                    app:layout_constraintTop_toBottomOf="@+id/icEditEmailBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_telepon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    app:tint="@color/see_listen_neutral2"
+                    android:src="@drawable/ic_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underLineEmail" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditNoTelpBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_telepon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_telepon"
+                    app:layout_constraintTop_toTopOf="@+id/ic_telepon">
+
+                    <TextView
+                        android:id="@+id/profileUserPhoneTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Masukkan Nomor Telepon"
+                        android:textColor="@color/see_listen_neutral2" />
+
+                    <ImageView
+                        android:id="@+id/ic_right5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/ubdeLineTelepon"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_telepon"
+                    app:layout_constraintTop_toBottomOf="@+id/icEditNoTelpBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    app:tint="@color/see_listen_neutral2"
+                    android:src="@drawable/ic_password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ubdeLineTelepon" />
+
+                <RelativeLayout
+                    android:id="@+id/icEditPasswordBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_password"
+                    app:layout_constraintTop_toTopOf="@+id/ic_password">
+
+                    <TextView
+                        android:id="@+id/profileUserPasswordTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="********"
+                        android:textColor="@color/see_listen_secondary" />
+
+                    <ImageView
+                        android:id="@+id/ic_right6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Lainnya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/akunContainer" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lainnyaContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/shape_bg_profile"
+                android:paddingStart="15dp"
+                android:paddingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <ImageView
+                    android:id="@+id/ic_petunjuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_petunjuk"
+                    app:tint="@color/see_listen_neutral2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/icPetunjukBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_petunjuk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_petunjuk"
+                    app:layout_constraintTop_toTopOf="@+id/ic_petunjuk">
+
+                    <TextView
+                        android:id="@+id/profilePetunjukTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Petunjuk Penggunaan"
+                        android:textColor="#FF222227"/>
+
+                    <ImageView
+                        android:id="@+id/ic_right7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underLinePetunjuk"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_petunjuk"
+                    app:layout_constraintTop_toBottomOf="@+id/icPetunjukBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_hapus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underLinePetunjuk"
+                    app:tint="@color/see_listen_red" />
+
+                <RelativeLayout
+                    android:id="@+id/icHapusAkunBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_hapus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_hapus"
+                    app:layout_constraintTop_toTopOf="@+id/ic_hapus">
+
+                    <TextView
+                        android:id="@+id/profileUserHapusAkunTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Hapus Akun"
+                        android:textColor="@color/see_listen_red"/>
+
+                    <ImageView
+                        android:id="@+id/ic_right8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/underlineHapusAkun"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFE0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_hapus"
+                    app:layout_constraintTop_toBottomOf="@+id/icHapusAkunBtn" />
+
+                <ImageView
+                    android:id="@+id/ic_keluar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_logout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/underlineHapusAkun"
+                    app:tint="@color/see_listen_red" />
+
+                <RelativeLayout
+                    android:id="@+id/icKeluarAkunBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_keluar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_keluar"
+                    app:layout_constraintTop_toTopOf="@+id/ic_keluar">
+
+                    <TextView
+                        android:id="@+id/profileUserKeluarTv"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Keluar"
+                        android:textColor="@color/see_listen_red"/>
+
+                    <ImageView
+                        android:id="@+id/ic_right9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/see_listen_neutral2" />
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

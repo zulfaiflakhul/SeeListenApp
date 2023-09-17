@@ -1,0 +1,208 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SeeListen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/see_listen_primary</item>
+        <item name="colorPrimaryVariant">@color/see_listen_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/see_listen_secondary</item>
+        <item name="colorSecondaryVariant">@color/see_listen_secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="android:textViewStyle">@style/TextViewStyle</item>-->
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/poppinsregular</item>
+    </style>
+
+    <!-- Text View -->
+
+    <style name="Heading1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsbold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Heading2" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsmedium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Heading3" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsmedium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Heading4" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Body1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Body2" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/see_listen_neutral1</item>
+    </style>
+
+    <!-- TextField -->
+
+    <style name="MyDenseOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>
+
+    </style>
+
+    <style name="MyThemeOverlayOutlinedDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_outlinedBox_dense_h" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- MyDense -->
+    <style name="MyDenseOutlined2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense2</item>
+
+    </style>
+
+    <style name="MyThemeOverlayOutlinedDense2">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h2
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_outlinedBox_dense_h2" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="InputField" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/poppinsregular</item>
+        <item name="android:background">@drawable/shape_input</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="InputField2" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/poppinsregular</item>
+        <item name="android:background">@drawable/custom_edit_text</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="InputField3" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/poppinsmedium</item>
+        <item name="android:background">@drawable/shape_input</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="MaterialInputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" tools:keep="@style/MaterialInputField">
+        <item name="android:fontFamily">@font/poppinsregular</item>
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="hintTextAppearance">@style/MainTypography</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="shapeAppearance">@style/MakeItRounded</item>
+    </style>
+
+    <style name="MakeItRounded" parent="ShapeAppearance.Material3.SmallComponent" tools:keep="@style/MakeItRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="MainTypography" parent="" tools:keep="@style/MainTypography">
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:fontFamily">@font/poppinsregular</item>
+    </style>
+
+    <!-- Button -->
+
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ButtonTheme</item>
+        <item name="shapeAppearance">@style/Button.MakeItRounded</item>
+
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:height">55dp</item>
+        <item name="android:fontFamily">@font/poppinsbold</item>
+    </style>
+
+    <style name="Button2" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ButtonTheme</item>
+        <item name="shapeAppearance">@style/Button.MakeItRounded</item>
+
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:height">30dp</item>
+        <item name="android:fontFamily">@font/poppinsbold</item>
+    </style>
+
+    <style name="Button3" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ButtonTheme</item>
+
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:height">21dp</item>
+        <item name="android:fontFamily">@font/poppinsbold</item>
+    </style>
+
+    <style name="ButtonTheme" parent="">
+        <item name="colorPrimary">@color/see_listen_secondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Button.MakeItRounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18sp</item>
+    </style>
+
+    <!-- InfoButtonSheets -->
+    <style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+        <item name="fontFamily">@font/poppinslight</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <!-- Animation Dialog -->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- Bottom Sheeet -->
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme2" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:backgroundDimAmount">0</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SeekBarWithoutSteps" parent="Base.Widget.AppCompat.SeekBar.Discrete">
+        <item name="tickMark">@null</item>
+        <item name="tickMarkTint">@color/see_listen_primary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/see_listen_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.GameTebakHurufFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="1dp"
+        android:background="@color/white"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Huruf A - E"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/gameProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:progress="4"
+            android:max="5"
+            android:progressDrawable="@drawable/horizontal_progressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/gameKeempat"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/jawabContainer"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jawabPertama"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="A"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageA"
+                    app:layout_constraintStart_toStartOf="@+id/imageA"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageA"
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:layout_below="@id/titleA"
+                    android:src="@drawable/img_sibi_a"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleA" />
+
+                <FrameLayout
+                    android:id="@+id/jawabPertamaOverlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#CCFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titleA" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jawabKedua"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:layout_toEndOf="@id/jawabPertama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="B"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageB"
+                    app:layout_constraintStart_toStartOf="@+id/imageB"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageB"
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:layout_below="@id/titleB"
+                    android:src="@drawable/img_sibi_b"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleB" />
+
+                <FrameLayout
+                    android:id="@+id/jawabKeduaOverlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#CCFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titleB" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jawabKetiga"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:layout_toEndOf="@id/jawabKedua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="C"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageC"
+                    app:layout_constraintStart_toStartOf="@+id/imageC"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageC"
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:layout_below="@id/titleC"
+                    android:src="@drawable/img_sibi_c"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleC" />
+
+                <FrameLayout
+                    android:id="@+id/jawabKetigaOverlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#CCFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageC"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titleC" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jawabKeempat"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:layout_toEndOf="@id/jawabKetiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="D"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageD"
+                    app:layout_constraintStart_toStartOf="@+id/imageD"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageD"
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:layout_below="@id/titleD"
+                    android:src="@drawable/img_sibi_d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleD" />
+
+                <FrameLayout
+                    android:id="@+id/jawabKeempatOverlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#CCFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titleD" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jawabKelima"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:layout_toEndOf="@id/jawabKeempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="E"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageE"
+                    app:layout_constraintStart_toStartOf="@+id/imageE"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageE"
+                    android:layout_width="65dp"
+                    android:layout_height="115dp"
+                    android:layout_below="@id/titleE"
+                    android:src="@drawable/img_sibi_e"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleE" />
+
+                <FrameLayout
+                    android:id="@+id/jawabKelimaOverlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#CCFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/titleE" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/camera_container"
+            android:layout_below="@id/jawabContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/view_finder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:scaleType="fillStart" />
+
+            <RelativeLayout
+                android:id="@+id/bottomNavCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/see_listen_transparent"
+                android:paddingVertical="25dp">
+
+                <ImageButton
+                    android:id="@+id/penerjemahBtnFlashCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/see_listen_transparent"
+                    android:contentDescription="@string/button_flash_camera"
+                    app:srcCompat="@drawable/ic_flash_off" />
+
+                <ImageButton
+                    android:id="@+id/penerjemahBtnFlipCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/see_listen_transparent"
+                    android:contentDescription="@string/buttonflipcamera"
+                    app:srcCompat="@drawable/ic_switch_camera" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recyclerview_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="90dp"
+                android:background="@drawable/shape_deskripsi"
+                android:clipToPadding="true"
+                android:padding="@dimen/result_view_padding"
+                app:layout_anchor="@id/bottomNavCamera"
+                app:layout_anchorGravity="top"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/see_listen_transparent"
+                app:layout_anchor="@id/recyclerview_results"
+                app:layout_anchorGravity="bottom" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

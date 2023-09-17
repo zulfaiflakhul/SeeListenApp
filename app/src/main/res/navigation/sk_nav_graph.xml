@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sk_nav_graph"
+    app:startDestination="@id/susunKataPermissionsFragment">
+
+    <fragment
+        android:id="@+id/susunKataPermissionsFragment"
+        android:name="com.daicov.seelisten.view.permissions.SusunKataPermissionsFragment"
+        android:label="SusunKataPermissionsFragment" >
+        <action
+            android:id="@+id/action_susunKataPermissionsFragment_to_susunkataCameraFragment"
+            app:destination="@id/susunkataCameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/susunkataCameraFragment"
+        android:name="com.daicov.seelisten.view.SusunkataCameraFragment"
+        android:label="fragment_susunkata_camera"
+        tools:layout="@layout/fragment_susunkata_camera" >
+        <action
+            android:id="@+id/action_susunkataCameraFragment_to_susunKataPermissionsFragment"
+            app:destination="@id/susunKataPermissionsFragment" />
+    </fragment>
+</navigation>

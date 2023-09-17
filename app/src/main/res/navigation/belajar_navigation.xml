@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/belajar_navigation"
+    app:startDestination="@id/belajarAlfabetFragment">
+
+    <fragment
+        android:id="@+id/belajarAlfabetFragment"
+        android:name="com.daicov.seelisten.view.BelajarAlfabetFragment"
+        android:label="BelajarAlfabetFragment" >
+        <action
+            android:id="@+id/action_belajarAlfabetFragment_to_pilihKartuFragment"
+            app:destination="@id/pilihKartuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pilihKartuFragment"
+        android:name="com.daicov.seelisten.view.PilihKartuFragment"
+        android:label="fragment_pilih_kartu"
+        tools:layout="@layout/fragment_pilih_kartu" />
+</navigation>

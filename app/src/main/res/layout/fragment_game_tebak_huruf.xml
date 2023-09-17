@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/see_listen_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.GameTebakHurufFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="1dp"
+        android:background="@color/white"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/closeGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleMenuTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Huruf A - E"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/closeGameButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/gameProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:progress="1"
+            android:max="5"
+            android:progressDrawable="@drawable/horizontal_progressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/closeGameButton"
+            app:layout_constraintTop_toBottomOf="@+id/titleMenuTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:visibility="visible"
+        android:id="@+id/gamePertama"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="36dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleGamePertama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Apakah ini huruf E?"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewImage"
+                    android:layout_below="@id/titleGamePertama"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="40dp"
+                    app:strokeColor="#FFADADAD"
+                    app:strokeWidth="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageHurufE"
+                        android:src="@drawable/img_sibi_e"
+                        android:layout_marginTop="58dp"
+                        android:layout_marginHorizontal="33dp"
+                        android:layout_width="153dp"
+                        android:layout_height="219dp"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardViewImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginBottom="81dp">
+
+                    <RadioButton
+                        android:id="@+id/benarButton"
+                        android:layout_width="75dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/radio_pilihan_normal"
+                        android:button="@color/see_listen_transparent"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/ya"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/salahButton"
+                        android:layout_width="75dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_toEndOf="@id/benarButton"
+                        android:background="@drawable/radio_pilihan_normal"
+                        android:button="@color/see_listen_transparent"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/tidak"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/gameKedua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="-20dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="45dp"
+                    android:paddingBottom="150dp">
+
+                    <TextView
+                        android:id="@+id/titleGameKedua"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Pilihlah tangan yang sesuai untuk huruf “D”"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleGameKedua">
+
+                        <FrameLayout
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imagePilihanA"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_b" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickA"
+                            android:visibility="gone"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanA">
+
+                        <FrameLayout
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imagePilihanB"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_a" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickB"
+                            android:visibility="gone"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline2"
+                        app:layout_constraintTop_toBottomOf="@id/titleGameKedua">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp">
+
+                            <ImageView
+                                android:id="@+id/imagePilihanC"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_d" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickC"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:visibility="gone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline2"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanC">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp">
+
+                            <ImageView
+                                android:id="@+id/imagePilihanD"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_e" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:visibility="gone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/periksaJawabanGame2"
+                style="@style/Button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#FFADADAD"
+                android:paddingHorizontal="20dp"
+                android:text="Periksa Jawaban" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/gameKetiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="-20dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="45dp"
+                    android:paddingBottom="35dp">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginEnd="60dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Pasangkan huruf dengan tangan yang sesuai"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanbahasaA"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="70dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView23">
+
+                        <FrameLayout
+                            android:id="@+id/containerA"
+                            android:background="#FFD9D9D9"
+                            android:paddingTop="21dp"
+                            android:paddingBottom="20dp"
+                            android:paddingHorizontal="22dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/pilihanATv"
+                                android:text="A"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="50sp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickBahasaA"
+                            android:visibility="gone"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanBahasaB"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="35dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanbahasaA">
+
+                        <FrameLayout
+                            android:id="@+id/containerB"
+                            android:background="#FFD9D9D9"
+                            android:paddingTop="21dp"
+                            android:paddingBottom="20dp"
+                            android:paddingHorizontal="22dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/pilihanBTv"
+                                android:text="B"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="50sp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickBahasaB"
+                            android:visibility="gone"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanBahasaC"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="35dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanBahasaB">
+
+                        <FrameLayout
+                            android:id="@+id/containerC"
+                            android:background="#FFD9D9D9"
+                            android:paddingTop="21dp"
+                            android:paddingBottom="20dp"
+                            android:paddingHorizontal="22dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/pilihanCTv"
+                                android:text="C"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="50sp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickBahasaC"
+                            android:visibility="gone"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanIsyaratA"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="70dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@id/textView23">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp">
+
+                            <ImageView
+                                android:id="@+id/pilihanAImg"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_b" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickIsyaratA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:visibility="gone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanIsyaratB"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="35dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanIsyaratA">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp">
+
+                            <ImageView
+                                android:id="@+id/pilihanBImg"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_c" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickIsyaratB"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:visibility="gone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pilihanIsyaratC"
+                        android:layout_width="78dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="35dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanIsyaratB">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFD9D9D9"
+                            android:paddingHorizontal="9dp"
+                            android:paddingTop="9dp">
+
+                            <ImageView
+                                android:id="@+id/pilihanCImg"
+                                android:layout_width="60dp"
+                                android:layout_height="107dp"
+                                android:src="@drawable/img_sibi_a" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/overlayClickIsyaratC"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#CCFFFFFF"
+                            android:backgroundTintMode="add"
+                            android:visibility="gone" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/selanjutnyaGame3"
+                style="@style/Button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#FFADADAD"
+                android:paddingHorizontal="20dp"
+                android:text="Selanjutnya" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/finishGameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="130dp"
+        android:background="@color/see_listen_transparent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_deskripsi"
+                android:paddingTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageFinish"
+                    android:layout_width="169dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/img_selesaiingat" />
+
+                <TextView
+                    android:id="@+id/titleFinishTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"
+                    android:layout_marginTop="35dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageFinish"
+                    app:layout_constraintStart_toStartOf="@+id/imageFinish"
+                    app:layout_constraintTop_toBottomOf="@+id/imageFinish" />
+
+                <TextView
+                    android:id="@+id/titleKeteranganFinishTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageFinish"
+                    app:layout_constraintStart_toStartOf="@+id/imageFinish"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFinishTv" />
+
+                <TextView
+                    android:id="@+id/deskripsiFinishTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="33dp"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingHorizontal="65dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleKeteranganFinishTv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/keteranganBenarTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout11" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/iconTrueContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/keteranganBenarTv">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconATrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_true_a" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconBTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_true_b" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconCTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_true_c" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconDTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_true_d" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconETrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_true_e" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/keteranganSalahTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconTrueContainer" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/iconFalseContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/keteranganSalahTv">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconAFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_false_a" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconBFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_false_b" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconCFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_false_c" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconDFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_false_d" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iconEFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_false_e" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mulaiLatihanBtn"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconFalseContainer" />
+
+            <Button
+                android:id="@+id/kembaliMengingatBtn"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/white"
+                android:textColor="#FFADADAD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mulaiLatihanBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
